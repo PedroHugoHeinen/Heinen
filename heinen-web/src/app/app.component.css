@@ -1,0 +1,18 @@
+.app-content{
+  .section{
+    width: 99vw;
+    height: calc(100vh - 35px);
+  }
+
+  .create-by {
+    display: flex;
+    color: #595959;
+    font-size: 1.2rem;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-weight: 700;
+    color: #224165;
+    margin: 0;
+  }
+}

@@ -1,0 +1,42 @@
+.heinen-toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  color: #595959;
+  font-size: 1.2rem;
+
+  .brand {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #224165;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  nav {
+    a {
+      padding: 0.5rem;
+      border: white 1px solid !important;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &.active {
+        font-weight: bold;
+        border: #224165 0.1rem solid !important;
+        color: #224165;
+      }
+
+      &:hover {
+        opacity: 0.8;
+        border: #224165 0.1rem solid !important;
+        color: #224165;
+      }
+    }
+  }
+}

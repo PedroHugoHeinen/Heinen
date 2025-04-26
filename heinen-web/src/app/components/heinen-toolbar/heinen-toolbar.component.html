@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" class="heinen-toolbar">
+  <span class="brand">HEINEN</span>
+
+  <span class="spacer"></span>
+
+  <nav>
+    <a *ngFor="let section of sections"
+       [class.active]="activeSection === section.id"
+       (click)="scrollToSection(section.id)">
+      {{ section.label }}
+    </a>
+  </nav>
+</mat-toolbar>
+
