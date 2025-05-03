@@ -22,8 +22,12 @@ export class HeinenHomeComponent implements AfterViewInit {
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.5 });
 
     this.fadeElements.forEach(el => observer.observe(el.nativeElement));
+  }
+
+  nextStep() {
+    window.location.href = '#professional';
   }
 }

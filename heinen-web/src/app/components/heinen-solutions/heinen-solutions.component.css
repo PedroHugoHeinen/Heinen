@@ -28,7 +28,7 @@
       white-space: normal;
       background-color: #FFF;
       border-radius: 5px;
-
+      justify-content: space-between;
 
       .solution-card-header {
         display: flex;
@@ -116,7 +116,7 @@
     }
 
     .solution-card.black {
-      border: 3px dashed #000;
+      border: 1px dashed #000;
     }
   }
 
@@ -133,7 +133,7 @@
       align-items: center;
       justify-content: center;
       padding: 1rem 3rem 1rem 3rem;
-      border: 3px dashed #595959;
+      border: 1px dashed #595959;
       border-radius: 5px;
       text-decoration: none;
       cursor: pointer;

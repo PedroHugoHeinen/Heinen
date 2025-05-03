@@ -1,0 +1,190 @@
+.contacts {
+  height: 100%;
+
+  .contacts-content {
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .contact-cards {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      margin: 0 1rem;
+      padding-bottom: 1rem;
+      justify-content: center;
+    }
+
+    .contact-card {
+      width: 25rem;
+      min-width: 20rem;
+      height: 38rem;
+      white-space: normal;
+      background-color: #FFF;
+      border-radius: 5px;
+      justify-content: space-between;
+
+      .contact-card-header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        .contact-image {
+          width: 100%;
+          height: 8rem;
+          object-fit: fill;
+        }
+
+        p {
+          margin: 0;
+          font-weight: 500;
+          font-size: 1.2rem;
+          color: #224165;
+
+          strong {
+            font-size: 1.5rem;
+          }
+        }
+
+        .contact-expertise {
+          position: absolute;
+          background-color: orange;
+          padding: 0.2rem 0.5rem;
+          border-radius: 5px;
+          color: #000;
+          font-size: 0.9rem;
+          font-weight: 500;
+          margin-top: -5px;
+          margin-left: -16rem;
+        }
+      }
+
+      .mat-mdc-card-actions {
+        justify-content: center;
+      }
+
+      .contact-card-actions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        gap: 6px;
+        flex-direction: row;
+        max-width: 340px;
+        flex-wrap: wrap;
+
+        .contact-button {
+          padding: 0.8rem 1rem 0.8rem 1rem;
+          border-radius: 5px;
+          text-decoration: none;
+          cursor: pointer;
+          color: #FFF;
+          background-color: #224165;
+          font-size: 1.2rem;
+          text-align: center;
+          font-weight: 600;
+          width: 6rem;
+          display: flex;
+          justify-content: center;
+        }
+
+        .contact-button.linkedin {
+          background-color: #0a66c2;
+          color: #fff;
+          border: 1px solid #0a66c2;
+
+          &:hover {
+            background-color: #fff;
+            color: #0a66c2;
+          }
+        }
+
+        .contact-button.discord {
+          background-color: #5662f6;
+          color: #fff;
+          border: 1px solid #5662f6;
+
+          &:hover {
+            background-color: #fff;
+            color: #5662f6;
+          }
+        }
+
+        .contact-button.github {
+          background-color: #000;
+          color: #fff;
+          border: 1px solid #000;
+
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
+        }
+
+        .contact-button.facebook {
+          background-color: #0866ff;
+          color: #fff;
+          border: 1px solid #0866ff;
+
+          &:hover {
+            background-color: #fff;
+            color: #0866ff;
+          }
+        }
+
+        .contact-button.email {
+          background-color: #224165;
+          color: #fff;
+          border: 1px solid #224165;
+
+          &:hover {
+            background-color: #fff;
+            color: #224165;
+          }
+        }
+
+        .contact-button.whatsapp {
+          background-color: #1f9e5c;
+          color: #fff;
+          border: 1px solid #1f9e5c;
+
+          &:hover {
+            background-color: #fff;
+            color: #1f9e5c;
+          }
+        }
+
+        .contact-button.instagram {
+          background-color: #fd0071;
+          color: #fff;
+          border: 1px solid #fd0071;
+
+          &:hover {
+            background-color: #fff;
+            color: #fd0071;
+          }
+        }
+      }
+
+      p {
+        color: #595959;
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
+
+    .contact-card.gray {
+      border: 1px solid #224165;
+      background-color: #faf9fd;
+    }
+  }
+}
