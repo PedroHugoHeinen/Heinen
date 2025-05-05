@@ -1,7 +1,6 @@
 import {AfterViewInit, Component, ElementRef, QueryList, ViewChildren} from '@angular/core';
 import { MatIcon} from '@angular/material/icon';
-import { MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle, MatCardSubtitle } from '@angular/material/card';
-import { MatDivider } from '@angular/material/list';
+import { MatCard, MatCardActions, MatCardContent, MatCardHeader } from '@angular/material/card';
 
 @Component({
   selector: 'app-heinen-projects',
@@ -10,10 +9,7 @@ import { MatDivider } from '@angular/material/list';
     MatCard,
     MatCardHeader,
     MatCardContent,
-    MatCardActions,
-    MatCardTitle,
-    MatCardSubtitle,
-    MatDivider
+    MatCardActions
   ],
   templateUrl: './heinen-projects.component.html',
   styleUrl: './heinen-projects.component.css'

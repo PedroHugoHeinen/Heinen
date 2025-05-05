@@ -4,18 +4,18 @@
   .professional-content {
     height: 95%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 1rem;
     flex-wrap: wrap;
     text-align: left;
 
     .professional-text {
       max-width: 600px;
-      font-size: 1.3rem;
+      font-size: 1rem;
       color: #224165;
-      padding-right: 5rem;
+      padding: 0 1rem;
     }
 
     .professional-image {
@@ -24,13 +24,14 @@
       text-align: center;
 
       .professional-logo {
-        width: 85px;
-        height: 85px;
+        width: 50px;
+        height: auto;
       }
 
       .professional-profile {
-        width: 350px;
+        width: 150px;
         height: auto;
+        align-self: center;
       }
 
       .professional-profile-text {
@@ -56,7 +57,7 @@
   }
 
   .professional-footer {
-    height: 0%;
+    height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,15 +76,63 @@
       color: #595959;
 
       .professional-next-step-icon {
-        width: 3rem;
-        height: 3rem;
-        font-size: 3rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1.8rem;
+        align-self: start;
       }
 
       span {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: bold;
         text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .professional {
+    .professional-content {
+      flex-direction: row;
+      gap: 3rem;
+
+      .professional-text {
+        font-size: 1.3rem;
+      }
+
+      .professional-image {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .professional-logo {
+          width: 85px;
+        }
+
+        .professional-profile {
+          width: 350px;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .professional-footer {
+      .professional-next-step{
+        .professional-next-step-icon {
+          width: 3rem;
+          height: 3rem;
+          font-size: 3rem;
+          align-self: center;
+        }
+
+        span {
+          font-size: 1.2rem;
+
+        }
       }
     }
   }

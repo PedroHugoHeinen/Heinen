@@ -5,37 +5,53 @@
   z-index: 1000;
   color: #595959;
   font-size: 1.2rem;
+  background-color: #faf9fd;
 
   .brand {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #224165;
   }
 
-  .spacer {
-    flex: 1 1 auto;
-  }
-
   nav {
-    a {
-      padding: 0.5rem;
-      border: white 1px solid !important;
-      border-radius: 5px;
-      text-decoration: none;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.3s;
+    display: none;
+  }
+}
 
-      &.active {
-        font-weight: bold;
-        border: #224165 0.1rem solid !important;
-        color: #224165;
-      }
+@media (min-width: 920px) {
 
-      &:hover {
-        opacity: 0.8;
-        border: #224165 0.1rem solid !important;
-        color: #224165;
+  .heinen-toolbar {
+    .brand {
+      font-size: 3rem;
+    }
+
+    .spacer {
+      flex: 1 1 auto;
+    }
+
+    nav {
+      display: block;
+
+      a {
+        padding: 0.5rem;
+        border: white 1px solid !important;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &.active {
+          font-weight: bold;
+          border: #224165 0.1rem solid !important;
+          color: #224165;
+        }
+
+        &:hover {
+          opacity: 0.8;
+          border: #224165 0.1rem solid !important;
+          color: #224165;
+        }
       }
     }
   }

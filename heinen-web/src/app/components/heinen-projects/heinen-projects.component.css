@@ -21,8 +21,8 @@
     }
 
     .project-card {
-      min-width: 25rem;
-      max-width: 25rem;
+      min-width: 20rem;
+      max-width: 20rem;
       height: 30rem;
       white-space: normal;
       background-color: #FFF;
@@ -36,7 +36,7 @@
 
         .project-image {
           width: 100%;
-          height: 5rem;
+          height: 4rem;
           object-fit: cover;
         }
 
@@ -46,14 +46,14 @@
         }
 
         .project-working {
-          background-color: #224165;
+          background-color: #ffa500;
           padding: 0.2rem 0.5rem;
           border-radius: 5px;
-          color: #FFF;
+          color: #000;
           font-size: 0.9rem;
           font-weight: 500;
           margin-top: -12px;
-          margin-left: -16rem;
+          margin-left: -11rem;
         }
       }
 
@@ -87,7 +87,7 @@
   }
 
   .projects-footer {
-    height: 0%;
+    height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,13 +106,14 @@
       color: #595959;
 
       .projects-next-step-icon {
-        width: 3rem;
-        height: 3rem;
-        font-size: 3rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1.8rem;
+        align-self: start;
       }
 
       span {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: bold;
         text-align: center;
       }
@@ -137,4 +138,40 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #224165;
+}
+
+@media (min-width: 920px) {
+  .projects {
+    .projects-content {
+      .project-card {
+        min-width: 25rem;
+        max-width: 25rem;
+
+        .project-card-header {
+          .project-image {
+            height: 5rem;
+          }
+
+          .project-working {
+            margin-left: -16rem;
+          }
+        }
+      }
+    }
+
+    .projects-footer {
+      .projects-next-step{
+        .projects-next-step-icon {
+          width: 3rem;
+          height: 3rem;
+          font-size: 3rem;
+          align-self: center;
+        }
+
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
 }

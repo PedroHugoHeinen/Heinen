@@ -12,17 +12,12 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 1rem;
       width: 100%;
-      overflow-x: auto;
-      white-space: nowrap;
-      margin: 0 1rem;
-      padding-bottom: 1rem;
       justify-content: center;
     }
 
     .contact-card {
-      width: 25rem;
+      max-width: 20rem;
       min-width: 20rem;
       height: 38rem;
       white-space: normal;
@@ -61,8 +56,8 @@
           color: #000;
           font-size: 0.9rem;
           font-weight: 500;
-          margin-top: -5px;
-          margin-left: -16rem;
+          margin-top: -12px;
+          margin-left: -13.5rem;
         }
       }
 

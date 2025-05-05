@@ -23,22 +23,18 @@ export class HeinenToolbarComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    for (const section of this.sections) {
-      const el = document.getElementById(section.id);
+    this.sections.forEach(sec => {
+      const el = document.getElementById(sec.id);
       if (el) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom >= 100) {
-          this.activeSection = section.id;
-          break;
+        const { top, bottom } = el.getBoundingClientRect();
+        if (top <= 100 && bottom >= 100) {
+          this.activeSection = sec.id;
         }
       }
-    }
+    });
   }
 
   scrollToSection(id: string) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    document.getElementById(id)?.scrollIntoView();
   }
 }

@@ -6,13 +6,21 @@
 
   .create-by {
     display: flex;
-    color: #595959;
-    font-size: 1.2rem;
+    font-size: 0.6rem;
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    right: 20px;
     font-weight: 700;
     color: #224165;
     margin: 0;
+  }
+}
+
+@media (min-width: 720px) {
+  .app-content{
+
+    .create-by {
+      font-size: 1.2rem;
+    }
   }
 }

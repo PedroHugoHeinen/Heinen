@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, QueryList, ViewChildren} from '@angular/core';
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader} from '@angular/material/card';
-import {MatIcon} from '@angular/material/icon';
+import {MatDivider} from '@angular/material/list';
 
 @Component({
   selector: 'app-heinen-contact',
@@ -9,7 +9,7 @@ import {MatIcon} from '@angular/material/icon';
     MatCardActions,
     MatCardContent,
     MatCardHeader,
-    MatIcon
+    MatDivider
   ],
   templateUrl: './heinen-contact.component.html',
   styleUrl: './heinen-contact.component.css'
