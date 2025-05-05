@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import {AfterViewInit, Component, OnDestroy} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -10,31 +10,48 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrls: [ './heinen-toolbar.component.css' ]
 })
 
-export class HeinenToolbarComponent {
-  sections: { id: string; label: string }[] = [
+export class HeinenToolbarComponent  implements AfterViewInit, OnDestroy {
+  sections = [
     { id: 'home', label: 'Home' },
     { id: 'professional', label: 'Profissional' },
     { id: 'projects', label: 'Projetos' },
     { id: 'solutions', label: 'Soluções' },
     { id: 'contact', label: 'Contato' }
   ];
+  activeSection = 'home';
+  private container!: HTMLElement;
+  private onScroll = () => this.updateActiveSection();
 
-  activeSection: string = 'home';
+  ngAfterViewInit() {
+    this.container = document.getElementById('appContent')!;
+    this.container.addEventListener('scroll', this.onScroll, { passive: true });
+    // dispara uma vez para calibrar o highlight inicial
+    this.updateActiveSection();
+  }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.sections.forEach(sec => {
-      const el = document.getElementById(sec.id);
-      if (el) {
-        const { top, bottom } = el.getBoundingClientRect();
-        if (top <= 100 && bottom >= 100) {
-          this.activeSection = sec.id;
-        }
+  ngOnDestroy() {
+    this.container.removeEventListener('scroll', this.onScroll);
+  }
+
+  private updateActiveSection() {
+    const scrollPos = this.container.scrollTop;
+    const viewportMid = this.container.clientHeight / 2;
+    for (const sec of this.sections) {
+      const el = document.getElementById(sec.id)!;
+      const top = el.offsetTop;
+      const bottom = top + el.offsetHeight;
+      if (scrollPos + viewportMid >= top && scrollPos + viewportMid < bottom) {
+        this.activeSection = sec.id;
+        break;
       }
-    });
+    }
   }
 
   scrollToSection(id: string) {
-    document.getElementById(id)?.scrollIntoView();
+    const el = document.getElementById(id)!;
+    this.container.scrollTo({
+      top: el.offsetTop,
+      behavior: 'smooth'
+    });
   }
 }

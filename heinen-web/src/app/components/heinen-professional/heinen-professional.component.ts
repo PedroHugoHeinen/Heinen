@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, ElementRef, QueryList, ViewChildren} from '@angular/core';
 import {MatIcon} from '@angular/material/icon';
+import { SECTION_IDS, SectionId } from '../../constants/sections';
 
 @Component({
   selector: 'app-heinen-professional',
@@ -10,7 +11,22 @@ import {MatIcon} from '@angular/material/icon';
   styleUrl: './heinen-professional.component.css'
 })
 export class HeinenProfessionalComponent implements AfterViewInit {
+  readonly currentSection: SectionId = 'professional';
+  readonly sections = SECTION_IDS;
   @ViewChildren('fadeInRef', { read: ElementRef }) fadeElements!: QueryList<ElementRef>;
+
+  nextStep() {
+    const idx = this.sections.indexOf(this.currentSection);
+    const next = this.sections[idx + 1];
+    if (!next) { return; }
+
+    const container = document.getElementById('appContent')!;
+    const targetEl = document.getElementById(next)!;
+    container.scrollTo({
+      top: targetEl.offsetTop,
+      behavior: 'smooth'
+    });
+  }
 
   ngAfterViewInit(): void {
     const observer = new IntersectionObserver((entries, obs) => {

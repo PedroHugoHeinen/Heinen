@@ -38,3 +38,22 @@ body {
   scroll-snap-align: start;
   height: calc(100vh - 64px);
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: auto;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #595959;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #224165;
+}
