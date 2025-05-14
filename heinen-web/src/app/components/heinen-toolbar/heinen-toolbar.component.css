@@ -56,13 +56,3 @@
     }
   }
 }
-
-@media (orientation: landscape) {
-  .heinen-toolbar {
-    height: 2rem;
-
-    .brand {
-      font-size: 1rem;
-    }
-  }
-}
