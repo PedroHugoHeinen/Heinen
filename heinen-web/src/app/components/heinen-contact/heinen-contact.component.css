@@ -183,3 +183,26 @@
     }
   }
 }
+
+@media (orientation: landscape) {
+  .contacts {
+    .contacts-content {
+      .contact-card {
+        max-width: 38rem;
+        min-width: 38rem;
+        height: 20rem;
+
+        .contact-card-actions {
+          .contact-button {
+            padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .mat-mdc-card-content {
+        display: none;
+      }
+    }
+  }
+}

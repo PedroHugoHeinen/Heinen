@@ -62,6 +62,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: -30px;
 
     .professional-next-step{
       display: flex;
@@ -134,6 +136,26 @@
 
         }
       }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .professional {
+    .professional-content {
+
+      .professional-text {
+        font-size: 1rem;
+        padding-top: 2rem;
+      }
+
+      .professional-image {
+        display: none;
+      }
+    }
+
+    .professional-footer{
+      display: none;
     }
   }
 }

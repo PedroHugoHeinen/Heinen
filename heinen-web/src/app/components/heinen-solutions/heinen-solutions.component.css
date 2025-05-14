@@ -125,6 +125,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: -35px;
 
     .solutions-next-step{
       display: flex;
@@ -201,6 +203,18 @@
           font-size: 1.2rem;
         }
       }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .solutions {
+    .solution-cards {
+      margin-top: 24rem !important;
+    }
+
+    .solutions-footer{
+      display: none;
     }
   }
 }

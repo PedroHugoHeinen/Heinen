@@ -1,6 +1,6 @@
 .app-content{
   .section{
-    width: 98.9vw;
+    width: 98vw;
     height: calc(100vh - 35px);
   }
 
@@ -18,9 +18,22 @@
 
 @media (min-width: 720px) {
   .app-content{
-
     .create-by {
       font-size: 1.2rem;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .section{
+      width: 98vw !important;
+      overflow-x: hidden;
+      height: 100vh;
+    }
+
+    .app-content{
+      .create-by {
+        font-size: 0.8rem;
+      }
     }
   }
 }
