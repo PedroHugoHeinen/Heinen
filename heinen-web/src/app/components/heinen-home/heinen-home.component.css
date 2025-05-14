@@ -38,7 +38,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      padding: 1rem 3rem;
+      padding: 1rem 3rem 1rem 3rem;
       border: 1px dashed #595959;
       border-radius: 5px;
       text-decoration: none;
@@ -76,7 +76,7 @@
 
     .home-footer {
       .home-next-step{
-        padding: 1rem 3rem;
+        padding: 1rem 3rem 1rem 3rem;
 
         .home-next-step-icon {
           width: 3rem;
