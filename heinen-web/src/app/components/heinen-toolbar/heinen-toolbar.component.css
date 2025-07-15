@@ -34,7 +34,7 @@
 
       a {
         padding: 0.5rem;
-        border: white 1px solid !important;
+        margin: 0 1px;
         border-radius: 5px;
         text-decoration: none;
         text-align: center;
@@ -43,14 +43,15 @@
 
         &.active {
           font-weight: bold;
-          border: #224165 0.1rem solid !important;
+          border: #224165 1px solid !important;
           color: #224165;
         }
 
         &:hover {
+          font-weight: bold;
           opacity: 0.8;
-          border: #224165 0.1rem solid !important;
-          color: #224165;
+          border: #ffa500 1px solid !important;
+          color: #ffa500;
         }
       }
     }

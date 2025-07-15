@@ -204,3 +204,11 @@
     }
   }
 }
+
+@media (min-width: 1300px) {
+  .solutions {
+    .solution-cards {
+      justify-content: center;
+    }
+  }
+}
